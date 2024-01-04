@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 import { TitleText, TypingText } from "./CustomTexts";
 import { newFeatures } from "@/app/constants";
 import NewFeatures from "./NewFeatures";
+import Image from "next/image";
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
-      variants={staggerContainer}
+      variants={staggerContainer(1, 2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -21,7 +22,7 @@ const WhatsNew = () => (
         className="flex-[0.95] flex justify-center flex-col"
       >
         <TypingText title="| Whats new?" />
-        <TitleText title={<>What's new about Metaversus?</>} />
+        <TitleText title={<>What&apos;s new about Metaversus?</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
             <NewFeatures key={feature.title} {...feature} />
@@ -33,7 +34,9 @@ const WhatsNew = () => (
         variants={planetVariants("right")}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        <Image
+          width={1000}
+          height={100}
           src="/whats-new.png"
           alt="get-started"
           className="w-[90%] h-[90%] object-contain"

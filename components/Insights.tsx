@@ -10,7 +10,7 @@ import InsightCard from "./InsightCard";
 const Insights = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
-      variants={staggerContainer}
+      variants={staggerContainer(1, 2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}

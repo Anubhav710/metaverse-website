@@ -3,11 +3,12 @@
 import { fadeIn, staggerContainer, zoomIn } from "@/app/motion";
 import { styles } from "@/app/style";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Feedback = () => (
   <section className={`${styles.paddings}`}>
     <motion.div
-      variants={staggerContainer}
+      variants={staggerContainer(1, 2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -28,9 +29,9 @@ const Feedback = () => (
         </div>
 
         <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-          “With the development of today's technology, metaverse is very useful
-          for today's work, or can be called web 3.0. by using metaverse you can
-          use it as anything”
+          “With the development of today&apos;s technology, metaverse is very
+          useful for today&apos;s work, or can be called web 3.0. by using
+          metaverse you can use it as anything”
         </p>
       </motion.div>
 
@@ -38,9 +39,11 @@ const Feedback = () => (
         variants={fadeIn("left", "tween", 0.2, 1)}
         className="relative flex-1 flex justify-center items-center"
       >
-        <img
+        <Image
           src="/planet-09.png"
           alt="planet-09"
+          width={1000}
+          height={100}
           className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
         />
 
@@ -48,7 +51,9 @@ const Feedback = () => (
           variants={zoomIn(0.4, 1)}
           className="lg:block hidden absolute -left-[10%] top-[3%]"
         >
-          <img
+          <Image
+            width={1000}
+            height={100}
             src="/stamp.png"
             alt="stamp"
             className="w-[155px] h-[155px] object-contain"

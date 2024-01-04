@@ -26,7 +26,7 @@ export const TypingText = ({ title, textStyle }: TypingTextProp) => (
   <motion.p
     className={`font-normal text-[14px] text-secondary-white ${textStyle}`}
   >
-    {title.split("").map((letter, index) => (
+    {title.split("").map((letter: any, index: any) => (
       <motion.span
         variants={fadeInAnimation}
         initial="initial"

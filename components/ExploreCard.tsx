@@ -21,9 +21,11 @@ const ExploreCard = ({
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => handleClick(id)}
   >
-    <img
+    <Image
       src={imgUrl}
       alt="planet-04"
+      width={1000}
+      height={100}
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
@@ -35,9 +37,11 @@ const ExploreCard = ({
         <div
           className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
         >
-          <img
+          <Image
             src="/headset.svg"
             alt="headset"
+            height={100}
+            width={1000}
             className="w-1/2 h-1/2 object-contain"
           />
         </div>

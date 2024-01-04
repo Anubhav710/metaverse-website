@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ReactLenis } from "@studio-freight/react-lenis";
+
 import SmoothScrolling from "@/components/smooth-scroll";
 const inter = Inter({ subsets: ["latin"] });
 

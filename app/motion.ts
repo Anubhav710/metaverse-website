@@ -94,7 +94,12 @@ export const textVariant2 = {
   },
 };
 
-export const fadeIn = (direction, type, delay, duration) => ({
+export const fadeIn = (
+  direction: any,
+  type: any,
+  delay: any,
+  duration: any
+) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
     y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
@@ -113,7 +118,7 @@ export const fadeIn = (direction, type, delay, duration) => ({
   },
 });
 
-export const planetVariants = (direction) => ({
+export const planetVariants = (direction: any) => ({
   hidden: {
     x: direction === "left" ? "-100%" : "100%",
     rotate: 120,
@@ -129,7 +134,7 @@ export const planetVariants = (direction) => ({
   },
 });
 
-export const zoomIn = (delay, duration) => ({
+export const zoomIn = (delay: any, duration: any) => ({
   hidden: {
     scale: 0,
     opacity: 0,
